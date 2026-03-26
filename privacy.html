@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - Sanity Check</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f5f0e8; color: #2c2c2c; line-height: 1.7; }
+    header { background: #4A6B5D; padding: 24px 20px; text-align: center; }
+    header h1 { color: #f5f0e8; font-size: 24px; font-weight: 700; letter-spacing: 0.05em; }
+    header p { color: #c8d8d0; margin-top: 6px; font-size: 14px; }
+    main { max-width: 720px; margin: 40px auto; padding: 0 24px 60px; }
+    h2 { color: #4A6B5D; font-size: 20px; font-weight: 700; margin: 32px 0 12px; }
+    h3 { color: #3a5548; font-size: 16px; font-weight: 600; margin: 20px 0 8px; }
+    p { margin-bottom: 12px; font-size: 15px; }
+    ul { margin: 8px 0 12px 20px; }
+    li { margin-bottom: 6px; font-size: 15px; }
+    .effective-date { background: #fff; border-left: 3px solid #4A6B5D; padding: 12px 16px; border-radius: 0 8px 8px 0; margin-bottom: 32px; font-size: 14px; color: #555; }
+    a { color: #4A6B5D; text-decoration: underline; }
+    footer { text-align: center; padding: 24px 20px; color: #999; font-size: 12px; border-top: 1px solid #d8e4df; max-width: 720px; margin: 0 auto; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>SANITY CHECK</h1>
+    <p>Privacy Policy</p>
+  </header>
+  <main>
+    <div class="effective-date">Effective Date: March 26, 2026 &nbsp;&nbsp;|&nbsp;&nbsp; Last Updated: March 26, 2026</div>
+
+    <p>Sanity Check ("the App") is developed and operated by Joe Raymond, an independent developer. This Privacy Policy explains what information is collected when you use the App, how it is used, and your rights regarding your data.</p>
+
+    <p>By using Sanity Check, you agree to the collection and use of information as described in this policy.</p>
+
+    <h2>1. Information We Collect</h2>
+
+    <h3>Account Information</h3>
+    <p>When you create an account, we collect:</p>
+    <ul>
+      <li><strong>Email address</strong> — used for authentication and account management</li>
+      <li><strong>Apple ID identity token</strong> (if you use Sign in with Apple) — used to authenticate your account without sharing your email</li>
+    </ul>
+
+    <h3>Idea Submissions</h3>
+    <p>When you submit an idea for critique, we collect:</p>
+    <ul>
+      <li><strong>Idea title</strong> — the name of your idea</li>
+      <li><strong>Idea description</strong> — the details you provide about your idea</li>
+      <li><strong>Category</strong> — the type of idea (e.g., business, project, life choice)</li>
+    </ul>
+    <p>This content is sent to Anthropic's Claude API for analysis and is stored in our database as your critique history.</p>
+
+    <h3>Usage Data</h3>
+    <ul>
+      <li><strong>Daily usage counts</strong> — how many critiques you have used today (for enforcing free/Pro tier limits)</li>
+      <li><strong>Subscription status</strong> — whether you are on the Free or Pro tier</li>
+      <li><strong>Critique history</strong> — your past critiques stored in our cloud database and cached locally on your device</li>
+    </ul>
+
+    <h2>2. How We Use Your Information</h2>
+
+    <ul>
+      <li><strong>To provide the service:</strong> Your idea submissions are sent to Anthropic's Claude API to generate AI-powered critiques</li>
+      <li><strong>To store your history:</strong> Critique responses are stored in our Supabase database so you can review them in the Graveyard tab</li>
+      <li><strong>To enforce rate limits:</strong> Daily usage counts enforce the 1/day (Free) and 15/day (Pro) critique limits</li>
+      <li><strong>To sync your subscription:</strong> Your Pro subscription status is synchronized between Apple's StoreKit and our database</li>
+      <li><strong>To maintain your account:</strong> Authentication data keeps you signed in across sessions</li>
+    </ul>
+
+    <h2>3. Third-Party Services</h2>
+
+    <h3>Anthropic</h3>
+    <p>Your idea submissions (title, description, category) are sent to <strong>Anthropic</strong>'s Claude API to generate critique responses. Anthropic processes this data according to their own privacy policy. We recommend reviewing <a href="https://www.anthropic.com/privacy" target="_blank">Anthropic's Privacy Policy</a> to understand how they handle data submitted to their API.</p>
+
+    <h3>Supabase</h3>
+    <p>We use Supabase for authentication, database storage, and server-side logic (Edge Functions). Your account data, critique history, and usage counts are stored on Supabase's infrastructure in the US West (us-west-1) region. Supabase's privacy practices are described at <a href="https://supabase.com/privacy" target="_blank">supabase.com/privacy</a>.</p>
+
+    <h3>Apple</h3>
+    <p>If you subscribe to Sanity Check Pro, your subscription is managed by Apple through the App Store. Apple handles payment processing and subscription management. If you use Sign in with Apple, Apple authenticates your identity. Apple's privacy practices are described at <a href="https://www.apple.com/privacy/" target="_blank">apple.com/privacy</a>.</p>
+
+    <h2>4. Data Storage and Security</h2>
+
+    <p>Your data is stored in two locations:</p>
+    <ul>
+      <li><strong>Cloud (Supabase):</strong> Account information, critique history, usage counts, and subscription status are stored on Supabase's cloud infrastructure (us-west-1 region). Access is protected by row-level security policies.</li>
+      <li><strong>Local device (UserDefaults):</strong> A local cache of your critique history and app preferences are stored on your device.</li>
+    </ul>
+    <p>We implement reasonable technical measures to protect your data, but no internet transmission is completely secure.</p>
+
+    <h2>5. Data Retention</h2>
+
+    <p>Your data is retained as long as your account is active. When you delete your account:</p>
+    <ul>
+      <li>Your account is <strong>soft-deleted immediately</strong> — you are signed out and the account is deactivated</li>
+      <li>Your data is <strong>permanently purged after 30 days</strong></li>
+      <li>You can contact us within the 30-day window to cancel the deletion</li>
+    </ul>
+
+    <h2>6. Account Deletion</h2>
+
+    <p>You can delete your account at any time from within the App (Account settings). When you initiate deletion:</p>
+    <ul>
+      <li>Your account is immediately deactivated and you are signed out</li>
+      <li>All associated data (profile, critiques, usage history) is scheduled for permanent deletion</li>
+      <li>Data is permanently and irreversibly purged after 30 days</li>
+      <li>If you signed in with Apple, Apple Sign-In tokens are revoked at the time of deletion</li>
+    </ul>
+
+    <h2>7. Children's Privacy</h2>
+
+    <p>Sanity Check is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with their information, please contact us and we will promptly delete it.</p>
+
+    <h2>8. Your Rights</h2>
+
+    <p>You have the right to:</p>
+    <ul>
+      <li><strong>Access</strong> your personal data (visible within the App)</li>
+      <li><strong>Delete</strong> your account and all associated data (via Account settings)</li>
+      <li><strong>Contact us</strong> with any privacy questions or concerns</li>
+    </ul>
+
+    <h2>9. Changes to This Policy</h2>
+
+    <p>We may update this Privacy Policy from time to time. When we do, we will update the "Last Updated" date at the top of this page. Continued use of the App after changes constitutes acceptance of the updated policy. We encourage you to review this policy periodically.</p>
+
+    <h2>10. Contact</h2>
+
+    <p>If you have questions about this Privacy Policy or how your data is handled, please contact:</p>
+    <p><strong>Joe Raymond</strong><br>
+    Email: <a href="mailto:sanitycheck.app@gmail.com">sanitycheck.app@gmail.com</a></p>
+  </main>
+  <footer>
+    <p>&copy; 2026 Joe Raymond. All rights reserved. &nbsp;|&nbsp; <a href="index.html">Legal Home</a> &nbsp;|&nbsp; <a href="terms.html">Terms of Service</a></p>
+  </footer>
+</body>
+</html>
